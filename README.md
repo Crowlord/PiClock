@@ -1,3 +1,7 @@
+THIS FORK IS A CHANCE FOR ME TO TEST MY LOCALISATION AND ALTERATION OF THE MAIN FORK.
+
+DO NOT USE IT IT WILL NOT WORK FOR YOU
+
 # PiClock
 A Fancy Clock built around a monitor and a Raspberry Pi
 

@@ -1,6 +1,6 @@
 # change this to your API keys
-# OpenWeather API key
-owapi = 'YOUR OPENWEATHER API KEY'
+# DarkSky API key
+dsapi = 'YOUR DARKSKY API KEY'
 
 # Map API keys -- only needs 1 of the following
 # Google Maps API key (if usemapbox is not set in Config)

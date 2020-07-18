@@ -233,8 +233,8 @@ def wxfinished():
     global wind, wind2, wdate, bottom, forecast
     global wxicon2, temper2, wxdesc, attribution
 
-    attribution.setText("OpenWeatherMap.org")
-    attribution2.setText("OpenWeatherMap.org")
+    attribution.setText("DarkSky.net")
+    attribution2.setText("DarkSky.net")
 
     wxstr = str(wxreply.readAll())
     wxdata = json.loads(wxstr)
@@ -407,7 +407,13 @@ def getwx():
     global wxurl
     global wxreply
     print "getting current and forecast:" + time.ctime()
-    wxurl = 'https://api.openweathermap.org/data/2.5/onecall?lat=52.609955&lon=0.188501&appid=0.188501
+    wxurl = 'https://api.darksky.net/forecast/' + \
+        ApiKeys.dsapi + \
+        '/'
+    wxurl += str(Config.location.lat) + ',' + \
+        str(Config.location.lng)
+    wxurl += '?units=us&lang=' + Config.Language.lower()
+    wxurl += '&r=' + str(random.random())
     print wxurl
     r = QUrl(wxurl)
     r = QNetworkRequest(r)
